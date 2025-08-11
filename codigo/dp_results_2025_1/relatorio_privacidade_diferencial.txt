@@ -1,0 +1,46 @@
+RELATÓRIO DE PRIVACIDADE DIFERENCIAL
+======================================
+
+### Mecanismo de Laplace (Histogramas de Décadas) ###
+Sensibilidade da consulta de contagem: 1
+
+--- Frequências de Nascimentos por Década (Real vs. Anonimizada) ---
+             Real         ε=0.01          ε=0.1          ε=0.5          ε=1.0
+1910-1919     216     187.109083     226.932824     215.816076     215.504437
+1920-1929    3208    3439.697425    3199.435765    3209.689578    3206.367008
+1930-1939   14012   14074.359851   14001.884364   14010.164154   14012.459604
+1940-1949   27377   27398.979537   27366.970861   27377.057764   27376.872513
+1950-1959   46091   45974.536739   46086.032161   46091.408715   46089.589726
+1960-1969   78400   78283.521278   78400.507807   78395.247555   78399.990307
+1970-1979  109635  109419.727546  109633.536902  109635.484372  109632.323115
+1980-1989  144577  144708.808368  144571.595023  144574.848537  144578.707276
+1990-1999  138471  138493.593497  138473.532237  138466.921145  138470.341370
+2000-2009   53825   53878.810288   53812.234125   53829.561081   53825.393109
+2010-2019   31585   31265.992999   31579.626410   31590.354966   31584.527469
+2020-2029    3181    3462.041029    3177.890134    3182.918369    3181.040964
+
+### Mecanismo Exponencial (Raça/Cor em MORRINHOS) ###
+Sensibilidade da função de score: 1
+Candidatos para a seleção: ['PARDA', 'AMARELA', 'BRANCA', 'PRETA', 'INDÃ\x8dGENA']
+Frequências reais de Raça/Cor em MORRINHOS: {'PARDA': 223, 'BRANCA': 123, 'AMARELA': 55, 'PRETA': 23, 'INDÃ\x8dGENA': 3}
+
+--- Resultados da Consulta 'Qual é a raça/cor predominante?' (20 execuções) ---
+   - Epsilon = 0.01:
+     - 'BRANCA': 3 vezes
+     - 'PARDA': 9 vezes
+     - 'INDÃGENA': 4 vezes
+     - 'PRETA': 3 vezes
+     - 'AMARELA': 1 vezes
+
+   - Epsilon = 0.1:
+     - 'PARDA': 20 vezes
+
+   - Epsilon = 0.5:
+     - 'PARDA': 20 vezes
+
+   - Epsilon = 1.0:
+     - 'PARDA': 20 vezes
+
+
+======================================
+Os histogramas e gráficos foram salvos no diretório 'dp_results_2025_1'.
